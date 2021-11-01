@@ -545,6 +545,9 @@ function Home({address, chainId}) {
               center;
             background-size: cover;
           }
+          .stay-involved p{
+            font-size: 1.5rem;
+          }
           .socials {
             min-height: 500px;
           }
@@ -802,14 +805,14 @@ function Home({address, chainId}) {
             <p>Owning 4 Punks = 0.050 Mint For Jack In The Blocks</p>
             <p>Owning 7 Punks = 0.045 Mint For Jack In The Blocks</p>
             <div
-              className={`d-flex flex-column flex-md-row justify-content-around align-items-center`}>
+              className={`d-flex flex-column flex-md-row justify-content-start align-items-center`}>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-4`}
+                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 m-2 p-4`}
                 href={'https://punksevolved.io/'}>
                 Mint a Punk
               </a>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-4`}
+                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 m-2 p-4`}
                 href={'https://opensea.io/collection/evolvedpunks'}>
                 Opensea
               </a>
@@ -922,7 +925,7 @@ function Home({address, chainId}) {
           </div>
         </div>
         <div className={`d-flex flex-row justify-content-start px-4`}>
-          <p className={`m-0`}>COPYRIGHT JACK IN BLOCKS 2021</p>
+          <p className={`m-0`}>© COPYRIGHT JACK IN BLOCKS 2021</p>
         </div>
       </div>
       <hr className={`container`} />
