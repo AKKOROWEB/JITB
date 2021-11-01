@@ -530,8 +530,7 @@ function Home({address, chainId}) {
             font-size: 2rem;
           }
           .Punks-Evolved-container {
-            height: 100%;
-            height: 37.5rem;
+            min-height: 37.5rem;
             background: url('../Banner 2 reduced.jpg') no-repeat top center;
             background-size: cover;
           }
@@ -733,8 +732,8 @@ function Home({address, chainId}) {
         {/* PROFILE INFO */}
         <div
           className={`container d-flex flex-column justify-content-center
-            align-itens-center px-3  px-md-5 py-5 text-capitalize roadmap mx-auto`}>
-          <h1 className={`text-center punk-font`}>About Jacks</h1>
+            align-itens-center px-3  px-md-5 py-5 roadmap mx-auto`}>
+          <h1 className={`text-center punk-font mb-5`}>About Jacks</h1>
           <p>
             Jack In the Blocks is the first value added project to Evolved Punks
             and was painstakingly crafted in 3D with over 100 unique assets.
@@ -776,23 +775,23 @@ function Home({address, chainId}) {
         {/* ROADMAP */}
         <div
           className={`container  d-flex flex-column justify-content-center
-            align-itens-center px-3  px-md-5 py-5 text-capitalize`}>
+            align-itens-center px-3  px-md-5 py-5`}>
           <img
             src={'./RoadMap_Interactive LightMix.png'}
             alt='roadmap'
-            className='img-fluid'
+            className='img-fluid mb-5'
           />
           <img
-            className={`text-center roadmap mx-auto`}
+            className={`text-center roadmap mx-auto mb-5`}
             src={'./RoadMap_Chart.png'}
           />
         </div>
         {/* Punks Evolved */}
         <div
           className={`container-fluid Punks-Evolved-container d-flex flex-column justify-content-center
-            align-itens-center px-3 px-md-5 py-5 text-capitalize`}>
+            align-itens-center px-3 px-md-5 py-5`}>
           <div className={`d-flex flex-column  col-md-6 `}>
-            <h1 className={`punk-font`}>Punks Evolved?</h1>
+            <h1 className={`punk-font mb-5`}>Punks Evolved?</h1>
             <p>
               The first project in our ecosystem and the backbone to Jacks and
               what’s to come. Owning a Punks Evolved will grant you whitelist
@@ -805,12 +804,12 @@ function Home({address, chainId}) {
             <div
               className={`d-flex flex-column flex-md-row justify-content-around align-items-center`}>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 p-4`}
+                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-4`}
                 href={'https://punksevolved.io/'}>
                 Mint a Punk
               </a>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 p-4`}
+                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-4`}
                 href={'https://opensea.io/collection/evolvedpunks'}>
                 Opensea
               </a>
@@ -824,7 +823,7 @@ function Home({address, chainId}) {
           <img
             src={'./FAQ_Interactive LightMix.png'}
             alt='roadmap'
-            className='img-fluid'
+            className='img-fluid mb-5'
           />
           <div className={`d-flex flex-column roadmap mx-auto`}>
             <p>
@@ -885,9 +884,9 @@ function Home({address, chainId}) {
         {/* STAY INVOLVED */}
         <div
           className={`container-fluid stay-involved d-flex flex-column justify-content-center
-            align-itens-center px-3  px-md-5 py-5 text-capitalize`}>
+            align-itens-center px-3  px-md-5 py-5`}>
           <div className={`d-flex flex-column col-md-6`}>
-            <h3 className={`punk-font`}>Stay Involved</h3>
+            <h3 className={`punk-font mb-5`}>Stay Involved</h3>
             <p>
               Community is everything in NFTs and we’d love to have you as part
               of ours! Join our Discords to stay up to date with both projects!
@@ -902,21 +901,21 @@ function Home({address, chainId}) {
         {/* SOCIALS*/}
         <div
           className={`container-fluid socials d-flex flex-column justify-content-center
-            align-itens-center px-3  px-md-5 py-5 text-capitalize`}>
+            align-itens-center px-3  px-md-5 py-5`}>
           <div
             className={`d-flex flex-column flex-md-row justify-content-around align-items-center`}>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-4`}
               href={'https://opensea.io/collection/jackintheblocks'}>
               Opensea
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-4`}
               href={'https://punksevolved.io/'}>
               Punks Evolved
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-4`}
               href={'https://twitter.com/JacksInTheBlock'}>
               Twitter
             </a>

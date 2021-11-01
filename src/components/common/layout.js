@@ -21,8 +21,8 @@ function Layout({children, layoutContainerStyle = '', startCore}) {
           #__next,
           #__next > div {
             height: 100%;
-            font-family: Baskerville Old Face monospace;
-            background-color: #000;
+            font-family: 'Baskerville Old Face' monospace;
+            background-color: RGB(6,21,36);
           }
 
           .content-wrapper {
@@ -34,7 +34,7 @@ function Layout({children, layoutContainerStyle = '', startCore}) {
       {/* NAVBAR */}
       <Navbar
         navbarContainerStyle={'sticky-top border-top border-bottom border-dark'}
-        brandText={process.env.BRAND_NAME || 'JITB'}
+        brandText={''}
         brandTextStyle={`text-uppercase`}
         onClick={() => setShow(true)}
       />
