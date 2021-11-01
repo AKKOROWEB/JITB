@@ -386,6 +386,7 @@ function Home({address, chainId}) {
       process.env.CONTRACT_ADDRESS
     );
     const price = _price * amount;
+    console.log(price);
     await Contract.methods
       .mint(amount)
       .estimateGas({from: address, value: price})
@@ -408,6 +409,9 @@ function Home({address, chainId}) {
               setError('Insufficient Funds');
             }
           });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 
@@ -439,6 +443,9 @@ function Home({address, chainId}) {
               setError('Insufficient Funds');
             }
           });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 
@@ -502,6 +509,7 @@ function Home({address, chainId}) {
       .getDiscountPrice(address)
       .call()
       .then((res) => {
+        console.log(res);
         setPrice(res);
       })
       .catch((err) => {
@@ -545,7 +553,7 @@ function Home({address, chainId}) {
               center;
             background-size: cover;
           }
-          .stay-involved p{
+          .stay-involved p {
             font-size: 1.5rem;
           }
           .socials {
@@ -673,7 +681,7 @@ function Home({address, chainId}) {
                   <label htmlFor='minter-input' className={`h4 py-3 w-100`}>
                     Minting: {num_to_mint}
                     <br />
-                    Price: ~ {String(num_to_mint * 0.05).substring(0, 4)} ETH
+                    Price: ~ {String(num_to_mint * ((_price)/10e17))} ETH
                   </label>
                   <input
                     id={`minter-input`}
