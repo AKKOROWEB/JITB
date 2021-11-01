@@ -922,6 +922,9 @@ function Home({address, chainId}) {
             </a>
           </div>
         </div>
+        <div className={`d-flex flex-row justify-content-start px-4`}>
+          <p className={`m-0`}>COPYRIGHT JACK IN BLOCKS 2021</p>
+        </div>
       </div>
       <hr className={`container`} />
     </>
