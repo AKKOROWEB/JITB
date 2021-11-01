@@ -45,7 +45,7 @@ function MyApp({Component, pageProps}) {
         />
         <meta name='robots' content='index, follow'></meta>
         <meta charset='UTF-8'></meta>
-        <meta name='description' content='NMES: Nightmare On ETH Street' />
+        <meta name='description' content='JITB: Jack In The Blocks' />
         <style
           jsx
           data-href='https://fonts.googleapis.com/css?family=Poppins'>{`
