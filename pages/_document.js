@@ -44,26 +44,26 @@ class MyDocument extends Document {
             charset="UTF-8"
             dangerouslySetInnerHTML={{
               __html: `document.addEventListener('DOMContentLoaded', function () {
-              cookieconsent.run({ "notice_banner_type": "footer", "consent_type": "express", "palette": "dark", "language": "en", "page_load_consent_levels": ["strictly-necessary"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "website_name": "LAZY NFT APP", "open_preferences_center_selector": "open_preferences_center" });});`,
+              cookieconsent.run({ "notice_banner_type": "footer", "consent_type": "express", "palette": "dark", "language": "en", "page_load_consent_levels": ["strictly-necessary"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "website_name": "JACK IN THE BLOCKS", "open_preferences_center_selector": "open_preferences_center" });});`,
             }}
           />
-          <script
+          {/* <script
             type="text/plain"
             cookie-consent="tracking"
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          />{' '}
+          />{' '} */}
           {/*// eslint-disable-line no-console*/}
-          <script
+          {/* <script
             type="text/plain"
             cookie-consent="tracking"
             async
             data-ad-client={`ca-pub-${process.env.ADSENSE_KEY}`}
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js`}
             crossOrigin="anonymous"
-          ></script>
+          ></script> */}
           {/*// eslint-disable-line no-console*/}
-          <script
+          {/* <script
             type="text/plain"
             cookie-consent="tracking"
             dangerouslySetInnerHTML={{
@@ -76,7 +76,7 @@ class MyDocument extends Document {
             });
           `,
             }}
-          />
+          /> */}
           <noscript>
             Cookie Consent by{' '}
             <a
