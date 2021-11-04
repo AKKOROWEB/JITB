@@ -423,7 +423,7 @@ function Home({address, chainId}) {
           .pre_mint()
           .send({
             from: address,
-            value: parseInt(price),
+            value: price,
             gas: String(Math.floor(gasAmount * 1.25, 10)),
           })
           .on('transactionHash', function (hash) {
