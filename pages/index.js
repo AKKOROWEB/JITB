@@ -707,8 +707,7 @@ function Home({address, chainId}) {
                 <p>{error}</p>
               </div>
             )}
-            {parseInt(_price) < 60000000000000000 &&
-              !claimedStatus &&
+            {
               !PreMintStatus &&
               nftCount <= 2978 && (
                 <div className='container mint-input d-flex flex-column justify-content-center align-items-center p-3 border border-dark w-100 my-4'>
