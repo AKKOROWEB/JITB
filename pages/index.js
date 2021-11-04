@@ -419,7 +419,7 @@ function Home({address, chainId}) {
       .estimateGas({from: address, value: _price})
       .then((gasAmount) => {
         Contract.methods
-          .pre_mint(amount)
+          .pre_mint()
           .send({
             from: address,
             value: _price,
@@ -707,20 +707,18 @@ function Home({address, chainId}) {
                 <p>{error}</p>
               </div>
             )}
-            {
-              !PreMintStatus &&
-              nftCount <= 2978 && (
-                <div className='container mint-input d-flex flex-column justify-content-center align-items-center p-3 border border-dark w-100 my-4'>
-                  <Button
-                    buttonStyle={`mint-button-style btn-outline-light text-uppercase my-4 px-5`}
-                    onPress={async () => {
-                      if (nftCount < 2978) pre_mint(address, num_to_mint);
-                    }}>
-                    Presale Mint
-                  </Button>
-                  <p className={`text-center`}>{error}</p>
-                </div>
-              )}
+            {!PreMintStatus && nftCount <= 2978 && (
+              <div className='container mint-input d-flex flex-column justify-content-center align-items-center p-3 border border-dark w-100 my-4'>
+                <Button
+                  buttonStyle={`mint-button-style btn-outline-light text-uppercase my-4 px-5`}
+                  onPress={async () => {
+                    if (nftCount < 2978) pre_mint(address, num_to_mint);
+                  }}>
+                  Presale Mint
+                </Button>
+                <p className={`text-center`}>{error}</p>
+              </div>
+            )}
             <div className='container d-flex flex-column justify-content-center align-items-center p-3 border border-dark w-100 my-4'>
               <p>{nftCount}/2978 Minted</p>
               <div className='progress position-relative mb-3'>
