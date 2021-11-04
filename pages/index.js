@@ -414,15 +414,16 @@ function Home({address, chainId}) {
       process.env.CONTRACT_ADDRESS
     );
     console.log(address, amount);
+     const price = _price * 1;
     await Contract.methods
       .pre_mint()
-      .estimateGas({from: address, value: _price})
+      .estimateGas({from: address, value: price})
       .then((gasAmount) => {
         Contract.methods
           .pre_mint()
           .send({
             from: address,
-            value: _price,
+            value: parseInt(price),
             gas: String(Math.floor(gasAmount * 1.25, 10)),
           })
           .on('transactionHash', function (hash) {
