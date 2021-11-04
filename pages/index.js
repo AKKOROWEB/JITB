@@ -440,7 +440,7 @@ function Home({address, chainId}) {
       .catch((error) => {
         if (error.message.includes('User denied transaction signature')) {
           setError('User denied transaction signature');
-        }else{
+        } else {
           setError(error.message);
         }
       });
@@ -520,7 +520,7 @@ function Home({address, chainId}) {
       await getPreMintStatus();
       await getMintStatus();
       await getPrice(address);
-      // await getClaimed(address);
+      await getClaimed(address);
     });
   }, []);
   return (
@@ -707,18 +707,21 @@ function Home({address, chainId}) {
                 <p>{error}</p>
               </div>
             )}
-            {!PreMintStatus && nftCount <= 2978 && (
-              <div className='container mint-input d-flex flex-column justify-content-center align-items-center p-3 border border-dark w-100 my-4'>
-                <Button
-                  buttonStyle={`mint-button-style btn-outline-light text-uppercase my-4 px-5`}
-                  onPress={async () => {
-                    if (nftCount < 2978) pre_mint(address, num_to_mint);
-                  }}>
-                  Presale Mint
-                </Button>
-                <p className={`text-center`}>{error}</p>
-              </div>
-            )}
+            {parseInt(_price) < 60000000000000000 &&
+              !claimedStatus &&
+              !PreMintStatus &&
+              nftCount <= 2978 && (
+                <div className='container mint-input d-flex flex-column justify-content-center align-items-center p-3 border border-dark w-100 my-4'>
+                  <Button
+                    buttonStyle={`mint-button-style btn-outline-light text-uppercase my-4 px-5`}
+                    onPress={async () => {
+                      if (nftCount < 2978) pre_mint(address, num_to_mint);
+                    }}>
+                    Presale Mint
+                  </Button>
+                  <p className={`text-center`}>{error}</p>
+                </div>
+              )}
             <div className='container d-flex flex-column justify-content-center align-items-center p-3 border border-dark w-100 my-4'>
               <p>{nftCount}/2978 Minted</p>
               <div className='progress position-relative mb-3'>
