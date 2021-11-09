@@ -370,7 +370,7 @@ function Home({address, chainId}) {
   const [_price, setPrice] = useState(60000000000000000);
   const [whitelist, setWhitelist] = useState(false);
   const [nftCount, setNftCount] = useState(0);
-  const [num_to_mint, setNumToMint] = useState(0);
+  const [num_to_mint, setNumToMint] = useState(1);
   const [error, setError] = useState('');
   const [redeem_error, setRedeemError] = useState('');
   async function mint(address, amount) {
@@ -684,12 +684,12 @@ function Home({address, chainId}) {
                   <input
                     id={`minter-input`}
                     type={`range`}
-                    min={0}
+                    min={1}
                     max={5}
                     className={`w-100`}
                     value={num_to_mint}
                     onChange={(e) => {
-                      parseInt(e.target.value, 10) >= 0 &&
+                      parseInt(e.target.value, 10) >= 1 &&
                         parseInt(e.target.value, 10) <= 5 &&
                         setNumToMint(e.target.value);
                     }}
